@@ -1,3 +1,4 @@
+//relacion con categorias: clases
 import {
   BeforeInsert,
   Column,

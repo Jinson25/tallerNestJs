@@ -1,3 +1,4 @@
+//relacion con productos: clases
 import { Column, CreateDateColumn, DeleteDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity('categories', {schema:'ventas'})

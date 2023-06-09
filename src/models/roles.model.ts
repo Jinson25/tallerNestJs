@@ -1,3 +1,4 @@
+//relacion con usuarios
 import { Column, CreateDateColumn, DeleteDateColumn, Entity, ManyToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import { UserEntity } from "./usuarios.model";
 
