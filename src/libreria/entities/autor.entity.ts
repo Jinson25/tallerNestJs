@@ -47,7 +47,7 @@ export class AuthorEntity {
     nullable: false,
     comment: 'cedula del autor',
   })
-  ci: string;
+  ci: number;
 
   @Column('date', {
     name: 'nacimiento',

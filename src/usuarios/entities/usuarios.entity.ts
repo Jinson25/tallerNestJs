@@ -32,9 +32,33 @@ export class UserEntity {
     name: 'username',
     nullable: false,
     unique: true,
-    comment: 'Nombre del usuario',
+    comment: 'Nick',
   })
   username: string;
+
+  @Column('varchar', {
+    name: 'username',
+    nullable: false,
+    unique: true,
+    comment: 'Nombre del usuario',
+  })
+  firsName: string;
+
+  @Column('varchar', {
+    name: 'username',
+    nullable: false,
+    unique: true,
+    comment: 'APelldio del usuario',
+  })
+  lastName: string;
+
+  @Column('varchar', {
+    name: 'username',
+    nullable: false,
+    unique: true,
+    comment: 'Edad del usuario',
+  })
+  age: number;
 
   @Column('varchar', {
     name: 'password',
