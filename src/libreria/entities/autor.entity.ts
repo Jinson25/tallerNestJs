@@ -1,6 +1,6 @@
 //relacion con libros
 import { Column, CreateDateColumn, DeleteDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
-import { LibroEntity } from "./libro.model";
+import { LibroEntity } from "./libro.entity";
 
 @Entity('autores', { schema: 'libros' })
 export class AuthorEntity {

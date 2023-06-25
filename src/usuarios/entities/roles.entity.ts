@@ -1,9 +1,9 @@
-//relacion con roles
+//relacion con usuarios
 import { Column, CreateDateColumn, DeleteDateColumn, Entity, ManyToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
-import { RoleEntity } from "./roles.model";
+import { UserEntity } from "./usuarios.entity";
 
-@Entity('usuarios', { schema: 'libros' })
-export class UserEntity {
+@Entity('roles', { schema: 'libros' })
+export class RoleEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -29,27 +29,13 @@ export class UserEntity {
   deletedAt: Date;
 
   @Column('varchar', {
-    name: 'username',
+    name: 'name',
     nullable: false,
     unique: true,
-    comment: 'Nombre del usuario',
+    comment: 'Nombre del rol',
   })
-  username: string;
+  name: string;
 
-  @Column('varchar', {
-    name: 'password',
-    nullable: false,
-    comment: 'contraseña del usuaro',
-  })
-  password: string;
-
-  @Column('varchar', {
-    name: 'email',
-    nullable: false,
-    comment: 'Correo electronico del usuaro',
-  })
-  email: string;
-
-  @ManyToMany(() => RoleEntity, role => role.users)
-  roles: RoleEntity[];
+  @ManyToMany(() => UserEntity, user => user.roles)
+  users: UserEntity[];
 }

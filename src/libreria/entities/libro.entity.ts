@@ -8,7 +8,7 @@ import {
     PrimaryGeneratedColumn,
     UpdateDateColumn,
 } from 'typeorm';
-import { AuthorEntity } from './autor.model';
+import { AuthorEntity } from './autor.entity';
 
 @Entity('libros', { schema: 'ventas' })
 export class LibroEntity {

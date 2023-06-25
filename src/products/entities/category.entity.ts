@@ -1,5 +1,6 @@
 //relacion con productos: clases
-import { Column, CreateDateColumn, DeleteDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { Column, CreateDateColumn, DeleteDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { ProductEntity } from "./product.entity";
 
 @Entity('categories', {schema:'ventas'})
 
@@ -41,4 +42,6 @@ export class CategoryEntity{
     }
     )
     description: string;
+    @OneToMany(() => ProductEntity, product => product.category)
+    productos: ProductEntity[];
 }
