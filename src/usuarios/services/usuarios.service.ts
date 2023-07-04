@@ -1,9 +1,26 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { UserEntity } from '../entities/usuarios.entity';
+import { CreateUsuariosDto } from '../dto/create-usuarios.dto';
+import { UpdateUsuariosDto } from '../dto/update-usuarios.dto';
 
 
 @Injectable()
 export class UserService {
+  remove(id: string) {
+      throw new Error('Method not implemented.');
+  }
+  update(id: string, updateUserDto: UpdateUsuariosDto) {
+      throw new Error('Method not implemented.');
+  }
+  findOne(id: string) {
+      throw new Error('Method not implemented.');
+  }
+  findAll() {
+      throw new Error('Method not implemented.');
+  }
+  create(createUserDto: CreateUsuariosDto) {
+      throw new Error('Method not implemented.');
+  }
   private users: UserEntity[] = [];
 
   async createUser({ createUserDto }: { createUserDto: CreateUserDto; }): Promise<UserEntity> {

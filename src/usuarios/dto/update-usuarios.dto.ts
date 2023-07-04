@@ -5,7 +5,7 @@ import { IsNotEmpty, IsNumber, IsOptional, IsString } from 'class-validator';
 import { CreateRolesDto, CreateUsuariosDto } from './create-usuarios.dto';
 import { BaseRolesDto } from './base-usuarios.dto';
 
-export class UpdateProductDto extends PartialType(CreateUsuariosDto) {
+export class UpdateUsuariosDto extends PartialType(CreateUsuariosDto) {
   @ApiProperty()
   @IsNotEmpty()
   @IsString()
