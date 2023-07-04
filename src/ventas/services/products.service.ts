@@ -34,7 +34,7 @@ export class ProductsService {
   findOne(id: string): ProductEntity {
     const product = this.products.find((p) => p.id === id);
     if (!product) {
-      throw new NotFoundException(`Product with ID ${id} not found`);
+      throw new NotFoundException(`Producto${id} no encontrado`);
     }
     return product;
   }
@@ -49,7 +49,7 @@ export class ProductsService {
   remove(id: string): void {
     const productIndex = this.products.findIndex((p) => p.id === id);
     if (productIndex === -1) {
-      throw new NotFoundException(`Product with ID ${id} not found`);
+      throw new NotFoundException(`Producto${id} no encontrado`);
     }
     this.products.splice(productIndex, 1);
   }
